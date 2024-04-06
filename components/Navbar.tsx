@@ -7,6 +7,7 @@ import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import StoreSwitcher from "./StoreSwitcher";
 import { ModeToggle } from "./ModeToggle";
+import { Button } from "./ui/button";
 
 const Navbar = async () => {
   const { userId } = auth();
@@ -29,6 +30,9 @@ const Navbar = async () => {
         <StoreSwitcher items={stores} />
         <MainNav className="mx-6 hidden lg:flex" />
         <div className="ml-auto flex items-center space-x-4">
+          <Button variant="ghost" className=" px-4 py-2 text-sm text-black">
+            <Link href={"https://ecom--store.vercel.app/"}>Store</Link>
+          </Button>
           <ModeToggle />
           <UserButton afterSignOutUrl="/" />
         </div>
